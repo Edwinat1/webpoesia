@@ -1,0 +1,86 @@
+
+
+body{
+    background: url(/img/imgfondo1.jpg);
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;                        /* Centrar todos los elementos */
+    height: 100vh;
+}
+
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;                           /* Se oculta todo fuera de las dimensiones que hemos dado */
+    border-radius: 12px;                        
+    box-shadow: 10px 10px 15px 0px ;                   /* Sombra 2d alrededor del cuadro */
+    cursor: pointer;                            
+}
+
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 103,123, 0.6);      /* 0.6 es la transparencia */
+    transition: all 500ms ease-out;
+    opacity: 0;                                /* Opacidad oculta el color y el texto */
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover>.capa{
+    opacity: 1;                                /* Aqui juegan los efectos contrarios, la opacidad será 1 porq la anterior es 0 */
+    visibility: visible;                       /* Muestra la capa, texto, etc */
+}
+
+.contenedor figure:hover>.capa h3{
+    margin-top: 70px;                           /* Se dezliza hacia abajo el h3 */
+    margin-bottom: 15px;
+}
+
+.contenedor figure .capa h3{
+    color: #fff;
+    font-weight: 400px;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+
+}
+
+.contenedor figure:hover>img{                   /* la imagen se acerca y aleja tipo zoom al pasar el puntero */
+    transform: scale(1.3);
+}
+
+.capa a{
+    text-decoration: none;
+    color:#F2B138 ;
+    font-size: 24px;
+    
+    
+}
+
+.capa h3 a{
+    font-size: 32px;
+}
+
